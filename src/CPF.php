@@ -2,7 +2,7 @@
 
 namespace WNMachado\BrazilianDocumentsTools;
 
-class CPF extends DocumentoAbstract
+class CPF extends DocumentAbstract
 {
     /**
      * Check if it is a valid CPF number

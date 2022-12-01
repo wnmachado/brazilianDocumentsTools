@@ -2,7 +2,7 @@
 
 namespace WNMachado\BrazilianDocumentsTools;
 
-class Documento extends DocumentoAbstract
+class Document extends DocumentAbstract
 {
     /**
      * Value to be validated

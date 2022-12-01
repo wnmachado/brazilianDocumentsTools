@@ -2,7 +2,7 @@
 
 namespace WNMachado\BrazilianDocumentsTools;
 
-class CNPJ extends DocumentoAbstract
+class CNPJ extends DocumentAbstract
 {
     /**
      * Check if it is a valid CNPJ number
