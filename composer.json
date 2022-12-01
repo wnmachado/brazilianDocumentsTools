@@ -26,12 +26,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Bissolli\\ValidadorCpfCnpj\\": "src/"
+      "wnmachado\\BrazilianDocumentsTools\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Bissolli\\ValidadorCpfCnpj\\Test\\": "tests/"
+      "wnmachado\\BrazilianDocumentsTools\\Test\\": "tests/"
     }
   },
   "config": {
