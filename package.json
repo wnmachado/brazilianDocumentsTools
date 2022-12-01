@@ -1,0 +1,43 @@
+{
+  "name": "brazilian_documents_tools",
+  "version": "1.0.0",
+  "description": "Classe para validação de CPF e CNPJ",
+  "author": "Wellington Machado <wellington.master@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wnmachado/brazilian_documents_tools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wnmachado/brazilian_documents_tools/issues"
+  },
+  "homepage": "https://github.com/wnmachado/brazilian_documents_tools#readme",
+  "keywords": [
+    "cnpj",
+    "cpf",
+    "validador",
+    "documento",
+    "brasil",
+    "laravel"
+  ],
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "cz-conventional-changelog": "^3.1.0",
+    "husky": "^4.2.1",
+    "standard-version": "^7.1.0"
+  }
+}
