@@ -1,6 +1,6 @@
 <?php
 
-namespace wnmachado\BrazilianDocumentsTools;
+namespace WNMachado\BrazilianDocumentsTools;
 
 class Documento extends DocumentoAbstract
 {
