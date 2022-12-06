@@ -26,12 +26,12 @@
   },
   "autoload": {
     "psr-4": {
-      "WNMachado\\BrazilianDocumentsTools\\": "src/"
+      "wnmachado\\BrazilianDocumentsTools\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "WNMachado\\BrazilianDocumentsTools\\Test\\": "tests/"
+      "wnmachado\\BrazilianDocumentsTools\\Test\\": "tests/"
     }
   },
   "config": {

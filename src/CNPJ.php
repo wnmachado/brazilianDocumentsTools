@@ -1,6 +1,6 @@
 <?php
 
-namespace WNMachado\BrazilianDocumentsTools;
+namespace wnmachado\BrazilianDocumentsTools;
 
 class CNPJ extends DocumentAbstract
 {
