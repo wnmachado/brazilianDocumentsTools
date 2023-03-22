@@ -25,6 +25,7 @@ abstract class DocumentAbstract
 
     abstract public function isValid();
     abstract public function format();
+    abstract public function hideNumbers();
 
     /**
      * Get class name without namespace

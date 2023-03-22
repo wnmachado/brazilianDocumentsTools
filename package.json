@@ -1,7 +1,7 @@
 {
   "name": "brazilian_documents_tools",
-  "version": "1.0.0",
-  "description": "Classe para validação de CPF e CNPJ",
+  "version": "1.0.1",
+  "description": "Classe de funcionalidades para os documentos CPF e CNPJ",
   "author": "Wellington Machado <wellington.master@gmail.com>",
   "license": "MIT",
   "scripts": {

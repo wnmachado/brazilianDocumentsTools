@@ -11,26 +11,27 @@ class CPF extends DocumentAbstract
      */
     public function isValid(): bool
     {
+        $isValid = true;
         # Retira da string tudo que não estiver entre 0 e 9
         $c = preg_replace('/\D/', '', $this->value);
 
         if (strlen($c) != 11 || preg_match("/^{$c[0]}{11}$/", $c)) {
-            return false;
+            $isValid = false;
         }
 
         for ($s = 10, $n = 0, $i = 0; $s >= 2; $n += $c[$i++] * $s--);
 
         if ($c[9] != ((($n %= 11) < 2) ? 0 : 11 - $n)) {
-            return false;
+            $isValid = false;
         }
 
         for ($s = 11, $n = 0, $i = 0; $s >= 2; $n += $c[$i++] * $s--);
 
         if ($c[10] != ((($n %= 11) < 2) ? 0 : 11 - $n)) {
-            return false;
+            $isValid = false;
         }
 
-        return true;
+        return $isValid;
     }
 
     /**
@@ -45,5 +46,11 @@ class CPF extends DocumentAbstract
         }
 
         return preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4", $this->value);
+    }
+
+    public function hideNumbers()
+    {
+        $document = preg_replace("/[^0-9]/", "", $this->value);
+        return substr($document, 0, 3) . '.###.###-' . substr($document, 9, 2);
     }
 }

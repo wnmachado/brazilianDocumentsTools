@@ -40,6 +40,16 @@ class Document extends DocumentAbstract
     }
 
     /**
+     * Hide number
+     *
+     * @return string
+     */
+    public function hideNumbers()
+    {
+        return $this->obj->hideNumbers();
+    }
+
+    /**
      * Get the raw value
      *
      * @return string
