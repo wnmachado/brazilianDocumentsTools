@@ -48,9 +48,24 @@ class CPF extends DocumentAbstract
         return preg_replace("/(\d{3})(\d{3})(\d{3})(\d{2})/", "\$1.\$2.\$3-\$4", $this->value);
     }
 
+    /**
+     * Get only numbers of CPF
+     *
+     * @return string
+     */
+    public function getOnlyNumbers()
+    {
+        return preg_replace("/\D/", "", $this->value);
+    }
+
+    /**
+     * Hide numbers of CPF
+     *
+     * @return string
+     */
     public function hideNumbers()
     {
-        $document = preg_replace("/[^0-9]/", "", $this->value);
+        $document = $this->getOnlyNumbers();
         return substr($document, 0, 3) . '.###.###-' . substr($document, 9, 2);
     }
 }

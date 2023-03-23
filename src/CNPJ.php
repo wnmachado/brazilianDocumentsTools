@@ -43,10 +43,24 @@ class CNPJ extends DocumentAbstract
     {
         return preg_replace("/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/", "\$1.\$2.\$3/\$4-\$5", $this->value);
     }
+    /**
+     * Get only numbers of CNPJ
+     *
+     * @return string
+     */
+    public function getOnlyNumbers()
+    {
+        return preg_replace("/\D/", "", $this->value);
+    }
 
+    /**
+     * Hide numbers of CNPJ
+     *
+     * @return string
+     */
     public function hideNumbers()
     {
-        $document = preg_replace("/[^0-9]/", "", $this->value);
+        $document = $this->getOnlyNumbers();
         return substr($document, 0, 2) . '.###.###/####-' . substr($document, 12, 2);
     }
 }

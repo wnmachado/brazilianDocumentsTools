@@ -40,6 +40,16 @@ class Document extends DocumentAbstract
     }
 
     /**
+     * Get only numbers
+     *
+     * @return string
+     */
+    public function getOnlyNumbers()
+    {
+        return $this->obj->getOnlyNumbers();
+    }
+
+    /**
      * Hide number
      *
      * @return string
